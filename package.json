@@ -1,0 +1,55 @@
+{
+  "name": "hadronbox",
+  "version": "0.1.0",
+  "description": "hadronbox.tr makineleri için komut satırı aracı (CLI for hadronbox.tr sandboxes)",
+  "type": "module",
+  "license": "Apache-2.0",
+  "author": "Kuark Dijital",
+  "homepage": "https://github.com/kuarkdijital/hadronbox-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuarkdijital/hadronbox-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kuarkdijital/hadronbox-cli/issues"
+  },
+  "keywords": [
+    "hadronbox",
+    "cli",
+    "sandbox",
+    "vm",
+    "ai-agents"
+  ],
+  "bin": {
+    "hadronbox": "dist/cli.js",
+    "hb": "dist/cli.js"
+  },
+  "files": [
+    "dist/cli.js",
+    "dist/hadronbox.js",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true,
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "prepack": "node build.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "check:pack": "node scripts/check-pack.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "26.1.2",
+    "esbuild": "0.28.2",
+    "typescript": "6.0.3",
+    "vitest": "3.2.7"
+  }
+}
